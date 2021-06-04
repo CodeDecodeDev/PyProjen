@@ -16,7 +16,11 @@ Commands:
     help: Shows where to find help and register bug reports.
 
 Bug reports:
+<<<<<<< HEAD
     For bug reports, see https://github.com/CodeDecodeDev/PyProjen
+=======
+    For bug reports, see https://github.com/something
+>>>>>>> e5d10b021616298e4ed4e024e4eaa20463a4c212
 '''
     )
 
@@ -48,6 +52,7 @@ def init():
                 print("Initialized PyProjen")
             
             except:
+<<<<<<< HEAD
                 
                 if platform.system() == "Linux" or "Darwin":
                     print("Failed to initialize. Check if pip is added to PATH and works by executing \"pip3\"")
@@ -57,6 +62,10 @@ def init():
                 
                 else:
                     print("Failed to initialize. Check if pip is added to PATH and works by executing \"pip3\" or \"pip\"")
+=======
+
+                print("Failed to initialize. Check if pip is added to PATH and works by executing \"pip\" or \"pip3\"")
+>>>>>>> e5d10b021616298e4ed4e024e4eaa20463a4c212
 
 
 def make(project_name):
@@ -70,6 +79,7 @@ def make(project_name):
     os.chdir(os.getcwd() + "/" + ".vscode")
     subprocess.check_output(["touch", "settings.json"])
     with open("settings.json", "w") as f:
+<<<<<<< HEAD
         f.write(
 '''
 {
@@ -77,6 +87,9 @@ def make(project_name):
 }
 '''
 )
+=======
+        f.write("{\"python.pythonPath\": \"Python/bin/python\"}")
+>>>>>>> e5d10b021616298e4ed4e024e4eaa20463a4c212
     os.chdir("..")
     subprocess.check_output(["touch", "app.py"])
     subprocess.check_output(["code", "."])
